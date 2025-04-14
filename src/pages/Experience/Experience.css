@@ -1,0 +1,95 @@
+/* Genel yapı */
+.experience-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: #fff;
+  }
+  
+  .subtitle {
+    color: red;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  
+  /* Deneyimler konteyneri */
+  .experience-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  /* Tek bir deneyim öğesi */
+  .experience-item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    text-align: left;
+    gap: 20px;
+    text-align: justify;
+
+  }
+  
+  /* Şirket bilgisi (sol) */
+  .company-info {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .company-info h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .date {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Zikzaklı çizgi ve nokta (orta) */
+  .timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 5px 0;
+  }
+  
+  .line {
+    width: 2px;
+    height: 50px;
+    background: #ddd;
+  }
+  
+  /* Pozisyon bilgisi (sağ) */
+  .position-info {
+    flex: 2;
+  }
+  
+  .position-info h3 {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .position-info p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+
+  }
+  

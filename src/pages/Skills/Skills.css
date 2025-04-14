@@ -1,0 +1,55 @@
+.skills-section{
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.substitle{
+    color:red;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+.title-skills{
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+.skills-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 2 sütunlu grid */
+    gap: 10px;
+    justify-items: center;
+}
+
+.skill-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* 🔥 Numara sola, skill sağa */
+    gap: 20px;
+    width: 400px;
+    padding: 10px 20px;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skill-item:hover {
+    transform: translateY(-5px); /* Hafif yukarı kayar */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+  }
+
+  .skill-item:hover .number {
+    transform: scale(1.1); /* Hafif büyüme efekti */
+    filter: brightness(1.1); /* Renk tonunu biraz aç */
+  }
+.number{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+.number h3{
+    color: white;
+}

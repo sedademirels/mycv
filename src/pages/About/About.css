@@ -1,0 +1,56 @@
+/*Ana container. Container içindeki tüm içeriği ortaladım*/
+.about-me{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    background: #F0F0F0;
+
+}
+.about-left {
+    position: relative; /*üstteki kutuyu konumlandırmak icin verdim*/
+}
+.profile-img{
+    width: auto;
+    height: 700px;
+}
+.about-right {
+    width: 700px;
+}
+.subtitle {
+    color: red; /* Yazı rengini kırmızı yapar */
+    font-weight: bold; /* Kalın yapar */
+    text-transform: uppercase; /* Tüm harfleri büyük yapar */
+    font-size: 24px; /* Font boyutunu belirler */
+  }
+  .title {
+    font-size: 32px; /* Yazı boyutunu belirler */
+    font-weight: bold; /* Yazıyı kalın yapar */
+    margin-bottom: 20px; /* Başlık ile açıklama arasına boşluk ekler */
+    margin-top: 10px;
+  }
+  .description {
+    font-size: 16px; /* Font boyutunu belirler */
+    color: #555; /* Açık gri metin rengi */
+    margin-bottom: 20px; /* Açıklama ile ilerleme çubukları arasına boşluk bırakır */
+  }
+  .skill {
+    margin-bottom: 15px; /* Her skill arasına boşluk bırakır */
+  }
+  .skill-info {
+    display: flex; /* İsmi ve yüzdesi yan yana dizmek için */
+    justify-content: space-between; /* İsim sola, yüzde sağa hizalanır */
+    font-size: 14px; /* Yazı boyutu */
+    font-weight: bold; /* Kalın yapar */
+    margin-top: 30px;
+  }
+  .progress-bar {
+    width: 100%; /* Çubuğun genişliği %100 olur */
+    height: 8px; /* Çubuğun yüksekliğini belirler */
+    background: #e0e0e0; /* Açık gri arka plan */
+    border-radius: 5px; /* Kenarları yuvarlar */
+    overflow: hidden; /* İçeriğin dışarı taşmasını engeller */
+  }
+  .progress-fill {
+    height: 100%; /* Yükseklik çubuğun tamamını kaplar */
+    transition: width 0.5s ease-in-out; /* Genişlik değişimini animasyonlu yapar */
+  }

@@ -1,0 +1,55 @@
+.navbar{
+    width: 100%;
+    height: 80px;
+    display: flex; /* Navbarı yatay hizaladım*/
+    justify-content: space-between; /*logo, menü ve buton arasında boşluk bıraktım*/
+    align-items: center; /* Dikey hizalamayı ortaladım*/
+    background: rgba(240, 240, 240, 0.7);
+    position: fixed;   /* Sabitleme */
+    top: 0;            /* Sayfanın en üstüne yapıştır */
+    left: 0;
+    right: 0;
+    z-index: 1000;     /* Diğer öğelerin üstünde kalsın */
+    
+}
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: #F2564C;
+    padding-left: 30px;
+}
+.nav-links{
+    list-style: none; /*listenin işaretlerini kaldırır*/
+    display: flex; /*liste öğelerini yan yana hizalama*/
+    gap: 20px; /*menü öğeleri arasına boşluk koydum*/
+}
+.nav-links .active{
+    color:#F2564C; /*Aktif menü öğesinin rengini değiştirir*/
+    font-weight: bold;
+}
+
+.cv-button{
+    background-color: #F1554C;
+    color: white;
+    padding: 10px 10px;
+    margin-right: 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+.cv-button:hover {
+    background-color: black;
+  }
+
+.nav-item {
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    text-decoration: none;
+  }
+  
+  .nav-item:hover {
+    color: #F2564C;
+  }

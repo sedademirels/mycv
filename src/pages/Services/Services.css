@@ -1,0 +1,101 @@
+.services-section{
+    background: white;
+    text-align: center;
+    margin-top: 4%;
+    height: 560px;
+    
+}
+.subtitle {
+    color: red;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  .curve-line{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    position: absolute;
+    left: 10%;
+}
+.sunny{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    position: absolute;
+    right: 10%;
+}
+.stars{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    position: absolute;
+    right:4% ;
+}
+  .services-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    max-width: 900px;
+    margin:0 auto;
+  }
+  .service-card{
+    background: #f8f8f8;
+    padding: 40px;
+    border-radius: 10px;
+    text-align: center;
+    width: 250px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out; /*0.3 s boyunca yumuşak geçiş. all tüm stil değişikliklerine ugrat demektir*/
+    
+  }
+  .service-card h3{
+    font-size: 18px;
+    margin: 15px 0;
+  }
+  .service-card p{
+    font-size: 14px;
+    color: #555;
+    text-align: justify;
+
+  }
+  .service-card.highlight{
+    background: #F1554C;
+    color: white;
+  }
+  .service-card.service-card.highlight p{
+    color: white;
+  }
+
+  .service-icon {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.purple {
+  color: #7d5bbe;
+}
+
+.red {
+  color: white;
+}
+
+.yellow {
+  color: #f4b400;
+}
+/* Hover Efekti: Turuncuya dönüş */
+.service-card:hover {
+    background: #F1554C !important; /* tüm diğer css özel. ezerek bu özelligi kullanır important ile.*/
+    color: white;
+    transform: scale(1.05); /* Hafif büyütme efekti */
+  }
+  
+  .service-card:hover p {
+    color: white;
+  }
