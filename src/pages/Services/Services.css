@@ -1,79 +1,99 @@
-.services-section{
-    background: white;
-    text-align: center;
-    margin-top: 4%;
-    height: 560px;
-    
+.services-section {
+  background: white;
+  text-align: center;
+  padding: 60px 20px;
+  position: relative;
+  overflow: hidden;
 }
+
+/* Başlıklar */
 .subtitle {
-    color: red;
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 14px;
-  }
-  
-  .title {
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 40px;
-  }
-  .curve-line{
-    width: 100px;
-    height: 100px;
-    display: flex;
-    position: absolute;
-    left: 10%;
+  color: red;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 14px;
 }
-.sunny{
-    width: 100px;
-    height: 100px;
-    display: flex;
-    position: absolute;
-    right: 10%;
-}
-.stars{
-    width: 100px;
-    height: 100px;
-    display: flex;
-    position: absolute;
-    right:4% ;
-}
-  .services-container{
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    max-width: 900px;
-    margin:0 auto;
-  }
-  .service-card{
-    background: #f8f8f8;
-    padding: 40px;
-    border-radius: 10px;
-    text-align: center;
-    width: 250px;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out; /*0.3 s boyunca yumuşak geçiş. all tüm stil değişikliklerine ugrat demektir*/
-    
-  }
-  .service-card h3{
-    font-size: 18px;
-    margin: 15px 0;
-  }
-  .service-card p{
-    font-size: 14px;
-    color: #555;
-    text-align: justify;
 
-  }
-  .service-card.highlight{
-    background: #F1554C;
-    color: white;
-  }
-  .service-card.service-card.highlight p{
-    color: white;
-  }
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
 
-  .service-icon {
+/* Dekoratif resimler */
+.curve-line,
+.sunny,
+.stars {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  z-index: 0;
+  opacity: 0.8;
+}
+
+.curve-line {
+  left: 5%;
+  top: 20px;
+}
+
+.sunny {
+  right: 5%;
+  top: 20px;
+}
+
+.stars {
+  right: 5%;
+  bottom: 20px;
+}
+
+/* Hizalama ve kapsayıcı yapı */
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  z-index: 1;
+  position: relative;
+}
+
+/* Kart yapısı */
+.service-card {
+  background: #f8f8f8;
+  padding: 30px 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  margin: 15px 0;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #555;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+/* Öne çıkan kart */
+.service-card.highlight {
+  background: #F1554C;
+  color: white;
+}
+
+.service-card.highlight p {
+  color: white;
+}
+
+/* İkonlar */
+.service-icon {
   font-size: 40px;
   margin-bottom: 10px;
 }
@@ -89,13 +109,53 @@
 .yellow {
   color: #f4b400;
 }
-/* Hover Efekti: Turuncuya dönüş */
+
+/* Hover efekti */
 .service-card:hover {
-    background: #F1554C !important; /* tüm diğer css özel. ezerek bu özelligi kullanır important ile.*/
-    color: white;
-    transform: scale(1.05); /* Hafif büyütme efekti */
+  background: #F1554C !important;
+  color: white;
+  transform: scale(1.05);
+}
+
+.service-card:hover p {
+  color: white;
+}
+
+/* 📱 Mobil ve Tablet Görünüm */
+@media (max-width: 992px) {
+  .services-container {
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .service-card:hover p {
-    color: white;
+
+  .service-card {
+    width: 90%;
   }
+
+  .service-card p {
+    text-align: center;
+  }
+
+  .curve-line,
+  .sunny,
+  .stars {
+    width: 60px;
+    height: 60px;
+    opacity: 0.6;
+  }
+
+  .curve-line {
+    top: 10px;
+    left: 5%;
+  }
+
+  .sunny {
+    top: 10px;
+    right: 5%;
+  }
+
+  .stars {
+    bottom: 10px;
+    right: 5%;
+  }
+}
