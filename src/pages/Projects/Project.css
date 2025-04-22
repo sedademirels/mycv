@@ -1,58 +1,107 @@
-.projects{
+.projects {
     background: #F0F0F0;
     text-align: center;
     padding: 60px 20px;
-}
-.project-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .project-title {
     color: red;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 14px;
-}
-.project-subtitle{
+    text-align: center;
+  }
+  
+  .project-subtitle {
     font-size: 32px;
     font-weight: bold;
     margin-bottom: 40px;
-}
-
-.project-container{
+    text-align: center;
+  }
+  
+  .project-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
     max-width: 900px;
-    margin: 0 auto;
-}
-.project-card{
-    display: flex;
-    align-items: center;
     width: 100%;
-    text-align: left;
+  }
+  
+  .project-card {
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
     gap: 20px;
     text-align: justify;
-}
-.timelinepro{
-    position: relative;
+  }
+  
+  .timelinepro {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-.dotpro{
+    justify-content: center;
+    min-width: 20px;
+  }
+  
+  .dotpro {
     width: 12px;
     height: 12px;
     border-radius: 50%;
     margin: 5px 0;
-}
-
-.right-info{
-    flex:2;
-}
-.right-info h3{
+  }
+  
+  .lines {
+    width: 2px;
+    height: 100%;
+    background: #ccc;
+    margin-left: 5px;
+  }
+  
+  .right-info {
+    flex: 1;
+  }
+  
+  .right-info h3 {
     font-size: 18px;
     font-weight: bold;
-}
-.right-info p{
+    margin: 0;
+  }
+  
+  .right-info p {
     font-size: 14px;
     color: #555;
     margin-top: 10px;
-}
+  }
+  
+  /* ✅ Mobil uyum */
+  @media (max-width: 768px) {
+    .project-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .timelinepro {
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+  
+    .right-info {
+      text-align: center;
+      padding: 0 10px;
+    }
+  
+    .right-info h3 {
+      font-size: 16px;
+    }
+  
+    .right-info p {
+      font-size: 13px;
+    }
+  }
+  

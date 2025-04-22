@@ -1,56 +1,117 @@
-/*Ana container. Container içindeki tüm içeriği ortaladım*/
-.about-me{
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    background: #F0F0F0;
+.about-me {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  background: #F0F0F0;
+  padding: 60px 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
 
-}
 .about-left {
-    position: relative; /*üstteki kutuyu konumlandırmak icin verdim*/
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
-.profile-img{
-    width: auto;
-    height: 700px;
+
+.profile-img {
+  height: 700px;
+  width: auto;
+  max-width: 100%;
+  object-fit: cover;
+  border-radius: 10px;
 }
+
 .about-right {
-    width: 700px;
+  flex: 1;
+  max-width: 600px;
+  min-width: 300px;
+  padding-right: 100px;
 }
+
 .subtitle {
-    color: red; /* Yazı rengini kırmızı yapar */
-    font-weight: bold; /* Kalın yapar */
-    text-transform: uppercase; /* Tüm harfleri büyük yapar */
-    font-size: 24px; /* Font boyutunu belirler */
+  color: red;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 24px;
+  text-align: center;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.description {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+  text-align: justify;
+}
+
+.skill {
+  margin-bottom: 15px;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  transition: width 0.5s ease-in-out;
+}
+
+/* 📱 Mobil ve Tablet Görünüm */
+@media (max-width: 992px) {
+  .about-me {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 40px 10px;
   }
-  .title {
-    font-size: 32px; /* Yazı boyutunu belirler */
-    font-weight: bold; /* Yazıyı kalın yapar */
-    margin-bottom: 20px; /* Başlık ile açıklama arasına boşluk ekler */
-    margin-top: 10px;
+
+  .about-left {
+    order: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
+
+  .profile-img {
+    height: auto;
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .about-right {
+    order: 2;
+    padding: 0 15px;
+    text-align: center;
+  }
+
   .description {
-    font-size: 16px; /* Font boyutunu belirler */
-    color: #555; /* Açık gri metin rengi */
-    margin-bottom: 20px; /* Açıklama ile ilerleme çubukları arasına boşluk bırakır */
+    text-align: center;
   }
-  .skill {
-    margin-bottom: 15px; /* Her skill arasına boşluk bırakır */
-  }
+
   .skill-info {
-    display: flex; /* İsmi ve yüzdesi yan yana dizmek için */
-    justify-content: space-between; /* İsim sola, yüzde sağa hizalanır */
-    font-size: 14px; /* Yazı boyutu */
-    font-weight: bold; /* Kalın yapar */
-    margin-top: 30px;
+    justify-content: space-between;
   }
-  .progress-bar {
-    width: 100%; /* Çubuğun genişliği %100 olur */
-    height: 8px; /* Çubuğun yüksekliğini belirler */
-    background: #e0e0e0; /* Açık gri arka plan */
-    border-radius: 5px; /* Kenarları yuvarlar */
-    overflow: hidden; /* İçeriğin dışarı taşmasını engeller */
-  }
-  .progress-fill {
-    height: 100%; /* Yükseklik çubuğun tamamını kaplar */
-    transition: width 0.5s ease-in-out; /* Genişlik değişimini animasyonlu yapar */
-  }
+}

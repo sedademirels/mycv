@@ -11,7 +11,7 @@ function Hero() {
                 <div className="text-content">
                     <p className="designation">Information System Engineer</p>
                     <h1>Hello! I am <br /><span>Seda Demirel</span></h1>
-                    <p className="description">Is is a long established fact that a reader will be distracted by the readable content of page when at its layout.
+                    <p className="description">Is is a long established fact that a reader will be distracted by the readable content of page when at its layout. 
                     </p>
                     <button className='browse-btn'>See More</button>
                 </div>

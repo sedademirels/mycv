@@ -84,3 +84,57 @@ h1 span{
     transform: scale(1.2); /* Hafif büyütme efekti */
     cursor: pointer;
   }
+  @media (max-width: 768px) {
+    .hero-container {
+      flex-direction: column;
+      height: auto;
+      padding-top: 150px;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .background-circle {
+      width: 250px;
+      height: 250px;
+      margin-left: 0;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  
+    .hero-content {
+      width: 90%;
+    }
+  
+    .text-content {
+      position: static;
+      margin-top: 20px;
+    }
+  
+    .h1,
+    h1 span {
+      font-size: 32px;
+    }
+  
+    .designation {
+      font-size: 20px;
+    }
+  
+    .description {
+      font-size: 16px;
+      margin-top: 15px;
+    }
+  
+    .browse-btn {
+      width: 100%;
+      max-width: 300px;
+    }
+  
+    .social-icons {
+      position: static;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 30px;
+    }
+  }
+  

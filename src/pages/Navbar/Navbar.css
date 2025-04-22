@@ -1,55 +1,98 @@
-.navbar{
+.navbar {
     width: 100%;
     height: 80px;
-    display: flex; /* Navbarı yatay hizaladım*/
-    justify-content: space-between; /*logo, menü ve buton arasında boşluk bıraktım*/
-    align-items: center; /* Dikey hizalamayı ortaladım*/
-    background: rgba(240, 240, 240, 0.7);
-    position: fixed;   /* Sabitleme */
-    top: 0;            /* Sayfanın en üstüne yapıştır */
-    left: 0;
-    right: 0;
-    z-index: 1000;     /* Diğer öğelerin üstünde kalsın */
-    
-}
-.logo{
+    background: rgba(240, 240, 240, 0.95);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
     font-size: 24px;
     font-weight: bold;
     color: #F2564C;
-    padding-left: 30px;
-}
-.nav-links{
-    list-style: none; /*listenin işaretlerini kaldırır*/
-    display: flex; /*liste öğelerini yan yana hizalama*/
-    gap: 20px; /*menü öğeleri arasına boşluk koydum*/
-}
-.nav-links .active{
-    color:#F2564C; /*Aktif menü öğesinin rengini değiştirir*/
+  }
+  
+  .menu-icon {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+  }
+  
+  .nav-links li {
+    margin: 0;
+  }
+  
+  .nav-item {
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-item:hover,
+  .nav-links .active {
+    color: #F2564C;
     font-weight: bold;
-}
-
-.cv-button{
+  }
+  
+  .cv-button {
     background-color: #F1554C;
     color: white;
-    padding: 10px 10px;
-    margin-right: 20px;
+    padding: 8px 12px;
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
     transition: background 0.3s ease;
-}
-.cv-button:hover {
-    background-color: black;
-  }
-
-.nav-item {
-    color: #333;
-    font-size: 16px;
-    cursor: pointer;
-    transition: color 0.3s ease;
-    text-decoration: none;
   }
   
-  .nav-item:hover {
-    color: #F2564C;
+  .cv-button:hover {
+    background-color: black;
   }
+  
+  /* 📱 Mobil görünüm */
+  @media (max-width: 768px) {
+    .menu-icon {
+      display: block;
+    }
+  
+    .nav-links {
+      position: absolute;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      display: none;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  
+    .cv-button {
+      text-align: center;
+      margin: 40px;
+      
+    }
+  }
+  
