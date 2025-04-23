@@ -112,7 +112,7 @@
 
 /* Hover efekti */
 .service-card:hover {
-  background: #F1554C !important;
+  background: #F9C9C6 !important;
   color: white;
   transform: scale(1.05);
 }

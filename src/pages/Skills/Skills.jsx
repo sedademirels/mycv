@@ -43,7 +43,17 @@ const skills =[
         number:"8",
         skill:"Docker, Linux",
         color: "#20dad4",
-    }
+    },
+    {
+      number:"9",
+      skill:"Figma",
+      color: "#7D5BFF",
+  },
+  {
+    number:"9",
+    skill:"Node.js",
+    color: "#73C746",
+}
 ]
 
 function Skills() {
