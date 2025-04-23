@@ -6,12 +6,11 @@ import { faFacebookF, faTwitter, faMediumM, faPinterestP } from "@fortawesome/fr
 function Hero() {
     return (
         <div id='home' className="hero-container" >
-            <div className="background-circle"></div> {/*Arka planı turuncu daire*/}
             <div className="hero-content">
                 <div className="text-content">
                     <p className="designation">Information System Engineer</p>
                     <h1>Hello! I am <br /><span>Seda Demirel</span></h1>
-                    <p className="description">Is is a long established fact that a reader will be distracted by the readable content of page when at its layout. 
+                    <p className="description">Is is a long established fact that a reader will be distracted by the readable content of page when at its layout. lorem50
                     </p>
                     <button className='browse-btn'>See More</button>
                 </div>

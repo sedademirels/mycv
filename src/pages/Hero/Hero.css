@@ -1,140 +1,195 @@
-.hero-container{
-    width: auto;
-    height: 500px;
-    background: #F0F0F0;
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    padding-top: 200px; /* içerik navbar'ın altında başlasın */
+.hero-container {
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fffafa, #fdfdff);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+  overflow: hidden;
+  text-align: center;
 }
 
-.background-circle{
-    width: 400px;
-    height: 400px;
-    background: radial-gradient(circle at top left, rgba(255, 170, 170, 0.6), rgba(255, 255, 255, 0.1));
-    border-radius: 50%;
-    position: absolute;
-    margin-left: 50px;
-    z-index: 1;
+/* Eğer Particles kullanıyorsan */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
 }
+
+.background-circle {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle at center, rgba(255, 170, 170, 0.2), transparent);
+  border-radius: 50%;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: float 6s ease-in-out infinite;
+  z-index: 1;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(-20px);
+  }
+}
+
 .hero-content {
-    width: 800px;
-    position: relative;
-    z-index: 2; /* Hero içeriğini ön plana almak için daha yüksek bir değer */
-  }
-.text-content{
-    position: absolute;
-    top: 20%;
-    left: 30%;
+  z-index: 2;
+  max-width: 900px;
+  width: 90%;
+  padding: 30px 40px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
 }
-.designation{
-    color: #EF564C;
-    font-weight: bold;
-    font-size: 30px;
+
+.text-content {
+  z-index: 2;
 }
-.h1{
-    font-size: 48px;
-    font-weight: bold;
+
+.designation {
+  color: #EF564C;
+  font-weight: bold;
+  font-size: 26px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
-h1 span{
-    font-size: 48px;
-    font-weight: bold;
-    color: black;
+
+h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin: 10px 0;
 }
-.description{
-    font-size: 20px;
-    color: #a6a6a7;
-    margin-top: 20px;
-    
+
+h1 span {
+  color: #7D5BFF;
+  font-size: 48px;
+  font-weight: bold;
+  position: relative;
 }
-.browse-btn{
-    background: #F1554C;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 20px;
+
+h1 span::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #F1554C;
+  transition: width 0.4s ease-in-out;
 }
+
+h1 span:hover::after {
+  width: 100%;
+}
+
+.description {
+  font-size: 20px;
+  color: #444;
+  line-height: 1.6;
+}
+
+.browse-btn {
+  background: linear-gradient(45deg, #F1554C, #EF564C);
+  background-size: 200% auto;
+  color: white;
+  padding: 12px 28px;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px;
+  margin-top: 25px;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.browse-btn:hover {
+  background-position: right center;
+  transform: scale(1.05);
+}
+
 .social-icons {
-    position: absolute;
-    right: 6%;
-    top: 60%;
-    transform: translateY(-50%);
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .icon {
-    width: 50px;
-    height: 50px;
-    background: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    color: #EF564C;
+  margin-top: 40px;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  z-index: 2;
+  flex-wrap: wrap;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  color: #EF564C;
+  transition: all 0.3s ease;
+}
+
+.icon:hover {
+  color: #F2564C;
+  transform: scale(1.2);
+}
+
+.scroll-down {
+  font-size: 36px;
+  color: #EF564C;
+  margin-top: 40px;
+  animation: bounce 2s infinite;
+  opacity: 0.7;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+/* 📱 Mobil Uyumluluk */
+@media (max-width: 768px) {
+  .hero-container {
+    padding-top: 80px;
   }
 
-  .icon:hover {
-    color: #F2564C; /* Hover rengini burada değiştir */
-    transform: scale(1.2); /* Hafif büyütme efekti */
-    cursor: pointer;
+  .background-circle {
+    width: 250px;
+    height: 250px;
   }
-  @media (max-width: 768px) {
-    .hero-container {
-      flex-direction: column;
-      height: auto;
-      padding-top: 150px;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .background-circle {
-      width: 250px;
-      height: 250px;
-      margin-left: 0;
-      top: 10%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  
-    .hero-content {
-      width: 90%;
-    }
-  
-    .text-content {
-      position: static;
-      margin-top: 20px;
-    }
-  
-    .h1,
-    h1 span {
-      font-size: 32px;
-    }
-  
-    .designation {
-      font-size: 20px;
-    }
-  
-    .description {
-      font-size: 16px;
-      margin-top: 15px;
-    }
-  
-    .browse-btn {
-      width: 100%;
-      max-width: 300px;
-    }
-  
-    .social-icons {
-      position: static;
-      flex-direction: row;
-      justify-content: center;
-      margin-top: 30px;
-    }
+
+  h1,
+  h1 span {
+    font-size: 32px;
   }
-  
+
+  .designation {
+    font-size: 18px;
+  }
+
+  .description {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+
+  .browse-btn {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .social-icons {
+    margin-top: 20px;
+  }
+}
