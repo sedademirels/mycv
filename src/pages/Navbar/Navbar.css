@@ -21,7 +21,8 @@
     display: none;
     font-size: 26px;
     cursor: pointer;
-    color: #333;
+    color: #F4B400;
+    margin-left: 30px;
   }
   
   .nav-links {
