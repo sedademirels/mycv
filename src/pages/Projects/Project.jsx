@@ -1,7 +1,7 @@
-import React from 'react'
-import '../Projects/Project.css'
+import React from 'react';
+import '../Projects/Project.css';
 import { Element } from 'react-scroll';
-
+import { motion } from 'framer-motion'; // Animasyon için eklendi
 
 const ProjectData = [
   {
@@ -22,36 +22,40 @@ const ProjectData = [
     description: "I contributed to the My Examy project at Semtech Software, primarily during my student years. I played a key role in mobile development, completing various tasks and developing a significant portion of the mobile application. React Native was used to build the user interfaces, ensuring a seamless user experience. The project I contributed to is currently available on the App Store.",
     color: "#73c746",
   },
-]
+];
 
 function Project() {
   return (
     <Element name="project" className="projects">
-
       <div className='projects-description'>
         <p className='project-title'>Projects</p>
         <h2 className='project-subtitle'>My Projects</h2>
-
       </div>
+
       <div className='project-container'>
-        {ProjectData.map((project, id) => (
-          <div key={id} className='project-card'>
+        {ProjectData.map((project, index) => (
+          <motion.div
+            key={project.id}
+            className='project-card'
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: index * 0.2 }}
+            viewport={{ once: true }}
+          >
             <div className='timelinepro'>
               <span className='dotpro' style={{ background: project.color }}></span>
-              {id !== ProjectData.length && <div className="lines"></div>}
+              {index !== ProjectData.length - 1 && <div className="lines"></div>}
             </div>
 
             <div className='right-info'>
               <h3>{project.title}</h3>
               <p>{project.description}</p>
             </div>
-          </div>
-
-
+          </motion.div>
         ))}
       </div>
     </Element>
-  )
+  );
 }
 
-export default Project
+export default Project;

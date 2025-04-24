@@ -2,6 +2,7 @@ import React from 'react'
 import '../About/About.css'
 import photome from '../../assets/photome.jpeg'
 import { Element } from 'react-scroll';
+import { motion } from 'framer-motion';
 
 
 const skills = [
@@ -16,7 +17,7 @@ const skills = [
 
 function About() {
   return (
-        <Element name="about" className="about-me">
+    <Element name="about" className="about-me">
       <div className='about-left'>
         <img src={photome} alt='profile' className='profile-img' />
         <span className='quote-icon'></span>
@@ -36,7 +37,14 @@ function About() {
               <span>{skill.percentage}%</span>
             </div>
             <div className="progress-bar">
-              <div className="progress-fill" style={{ width: `${skill.percentage}%`, backgroundColor: skill.color }}></div>
+              <motion.div
+                className="progress-fill"
+                initial={{ width: 0 }}
+                whileInView={{ width: `${skill.percentage}%` }}
+                transition={{ duration: 1, delay: index * 0.2 }}
+                viewport={{ once: true }}
+                style={{ backgroundColor: skill.color }}
+              />
             </div>
           </div>
         ))}
