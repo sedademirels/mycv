@@ -184,11 +184,20 @@ h1 span {
   border-right: 3px solid #EF564C; /* Yanıp sönen çizgi */
   animation: typing 2.5s steps(28, end), blink 0.75s step-end infinite;
   font-weight: bold;
-  font-size: 26px;
+  font-size: 20px;
   letter-spacing: 1px;
   color: #EF564C;
   max-width: fit-content;
 }
+@media (max-width: 768px) {
+  .typewriter {
+    font-size: 16px;
+    white-space: normal; /* ✔️ Uzun kelimeler satıra sığsın */
+    text-align: center;
+  
+  }
+}
+
 
 /* Yazma animasyonu */
 @keyframes typing {

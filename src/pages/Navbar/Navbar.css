@@ -19,10 +19,13 @@
   
   .menu-icon {
     display: none;
-    font-size: 26px;
+    font-size: 20px;
     cursor: pointer;
     color: #F4B400;
+    align-self: center;
     margin-left: 30px;
+    margin-top: 6px;
+    
   }
   
   .nav-links {
